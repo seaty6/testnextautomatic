@@ -1,21 +1,23 @@
 {
-        "name": "My Next.js App",
-        "build": {
-            "dockerfile": "Dockerfile",
-            // Specify the Dockerfile if you need a specific setup. 
-            // If not, you can use a predefined image.
-            "context": ".."
-        },
-        "postCreateCommand": "bash ./setup.sh",
-        "customizations": {
-            "vscode": {
-                "settings": {
-                    // Add any VS Code settings here.
-                },
-                "extensions": [
-                    // List any VS Code extensions here.
-                ]
-            }
+    "name": "My Next.js App",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+    // This image is a standard Node.js image suitable for JavaScript and Node.js development.
+    "postCreateCommand": "bash ./setup.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // Add any VS Code settings here.
+            },
+            "extensions": [
+                // List any VS Code extensions here.
+                "dbaeumer.vscode-eslint",  // For ESLint
+                "ms-vscode.vscode-typescript-next" // For TypeScript
+                // You can add more extensions as needed.
+            ]
         }
+    },
+    "forwardPorts": [
+        3000 // Common port for Next.js applications
+    ],
+    "remoteUser": "node"
 }
-  
