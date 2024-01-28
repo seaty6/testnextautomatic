@@ -15,6 +15,6 @@ git add .
 git commit -m "Initial setup"
 
 # Push the changes to the main branch
-# git push origin main
+git push origin main
 
 rm -- "$0"
