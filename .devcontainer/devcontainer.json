@@ -2,7 +2,7 @@
     "name": "My Next.js App",
     "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:latest",
     // This image is a standard Node.js image suitable for JavaScript and Node.js development.
-    "postCreateCommand": "bash ./devcontainer/setup.sh",
+    "postCreateCommand": "bash ./.devcontainer/setup.sh",
     "customizations": {
         "vscode": {
             "settings": {
